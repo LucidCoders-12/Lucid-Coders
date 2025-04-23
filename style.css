@@ -13,7 +13,7 @@ body {
 header {
     position: relative; /* Important for absolute positioning inside */
     display: flex; 
-    align-items: center; 
+    /*align-items: center; */
     justify-content: space-between; 
     padding: 20px; 
     background-color: #145267; 
@@ -30,15 +30,15 @@ h1 {
     font-family: 'Press Start 2P', cursive; 
     font-size: 3em; 
     color: #68a1bd; 
-    margin: 0; 
+    margin-right: 100px; 
     flex-grow: 1; 
     text-align: center; 
 }
 
 .feedback-link {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+    position:absolute;
+    top: 50px;
+    right: 10px;
     background-color: #041f2a;
     color: #ffffff;
     padding: 8px 12px;
@@ -160,6 +160,7 @@ button:hover {
         min-width: unset;      /* Cancel any inherited full width */
     }
     h1 {
+        margin: 0;
         font-size: 1.5em; /* Smaller font size for mobile */
     }
     h4 {
