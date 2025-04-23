@@ -11,123 +11,178 @@ body {
 }
 
 header {
-    display: flex; /* Use Flexbox for alignment */
-    align-items: center; /* Center items vertically */
-    justify-content: space-between; /* Space between logo and heading */
-    padding: 20px; /* Add some padding */
-    background-color: #145267; /* Background color for the header */
+    position: relative; /* Important for absolute positioning inside */
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 20px; 
+    background-color: #145267; 
+    flex-wrap: wrap;
 }
 
 .logo {
-    width: 100px; /* Set a width for the logo */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 20px; /* Space between logo and heading */
+    width: 100px; 
+    height: auto; 
+    margin-right: 20px; 
 }
 
 h1 {
-    font-family: 'Press Start 2P', cursive; /* Pixelated font */
-    font-size: 3em; /* Font size */
-    color: #68a1bd; /* Text color */
-    margin: 0; /* Remove default margin */
-    flex-grow: 1; /* Allow the heading to take up remaining space */
-    text-align: center; /* Center the text */
+    font-family: 'Press Start 2P', cursive; 
+    font-size: 3em; 
+    color: #68a1bd; 
+    margin: 0; 
+    flex-grow: 1; 
+    text-align: center; 
 }
 
 .feedback-link {
-    color: #081838; /* Link color */
-    text-decoration: none; /* Remove underline */
-    font-size: 1.2em; /* Font size for the link */
-    margin-left: 20px; /* Space between heading and link */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #041f2a;
+    color: #ffffff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+    white-space: nowrap;
 }
 
+/* Hover effect */
 .feedback-link:hover {
-    text-decoration: underline; /* Underline on hover */
-}
+    background-color: #333333;
+} 
 p {
-    font-family: Arial, sans-serif; /* Font family */
-    font-size: 22px; /* Font size */
-    line-height: 1.6; /* Line height for better readability */
-    margin: 50px 0; /* Margin above and below the paragraph */
-    padding: 10px; /* Padding inside the paragraph */
-    
+    font-family: Arial, sans-serif; 
+    font-size: 22px; 
+    line-height: 1.6; 
+    margin: 50px 0; 
+    padding: 10px; 
 }
+
 #card {
     display: flex;
-    overflow-x: auto; /* Enable horizontal scrolling */
-    overflow-y: hidden; /* Hide vertical overflow */
-    white-space: nowrap; /* Prevent line breaks */
+    overflow-x: auto; 
+    overflow-y: hidden; 
+    white-space: nowrap; 
     padding: 70px;
-    background-color: #145267; /* Background color for the card */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgb(5, 40, 60); /* Subtle shadow */
+    background-color: #145267; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgb(5, 40, 60); 
 }
 
-/* Hide scrollbar for WebKit browsers (Chrome, Safari) */
 #card::-webkit-scrollbar {
-    display: none; /* Hide scrollbar */
+    display: none; 
 }
 
-/* Hide scrollbar for Firefox */
 #card {
-    scrollbar-width: none; /* Hide scrollbar */
+    scrollbar-width: none; 
 }
 
-/* Box styles */
 .box-1, .box-2, .box-3, .box-4, .box-5, .box-6 {
-    min-width: 200px; /* Minimum width for each box */
-    margin-right: 20px; /* Space between boxes */
-    background-color: #062a36; /* Background color for boxes */
-    border-radius: 5px; /* Rounded corners for boxes */
+    min-width: 200px; 
+    margin-right: 20px; 
+    background-color: #062a36; 
+    border-radius: 5px; 
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; /* Center content vertically */
-    padding: 10px; /* Padding inside boxes */
-    flex-shrink: 0; /* Prevent boxes from shrinking */
+    flex-direction: column; 
+    padding: 10px; 
+    flex-shrink: 0; 
 }
-.box-1{
+
+.box-1 {
     width: 50vh;
 }
 
 .box-2 img, .box-3 img, .box-4 img, .box-5 img, .box-6 img {
     width: 90vh;
-    max-width: 100%; /* Responsive image */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; 
+    height: auto; 
 }
 
-h3 {
-    font-size: 1.5em;
+h4 {
+    font-family: 'Press Start 2P', cursive; 
+    font-size: 15px;
     margin: 10px 0;
-    color: #ffffff;
+    color: #c1c7e0;
 }
 
-/* General styles for the download section */
 h5 {
     font-size: 1.5em;
     color: #ffffff;
 }
 
 a {
-    text-decoration: none; /* Remove underline from links */
+    text-decoration: none; 
 }
 
 button {
-    background-color: #0d343c; /* Background color */
-    border: none; /* No border */
-    color: white; /* White text */
-    padding: 15px; /* Padding for button */
-    text-align: center; /* Center text */
-    text-decoration: none; /* No underline */
-    display: inline-block; /* Align buttons next to each other */
-    font-size: 16px; /* Font size */
-    margin: 4px 2px; /* Margin around buttons */
-    cursor: pointer; /* Pointer cursor on hover */
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s; /* Smooth transition */
-    width: 150px; /* Fixed width for all buttons */
-    min-width: 150px; /* Minimum width to maintain uniformity */
+    background-color: #0d343c; 
+    border: none; 
+    color: white; 
+    padding: 15px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+    font-size: 16px; 
+    margin: 4px 2px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    transition: background-color 0.3s; 
+    width: 150px; 
+    min-width: 150px; 
 }
 
 button:hover {
-    background-color: #030b0c; /* Darker shade on hover */
+    background-color: #030b0c; 
+}
+
+/* Media Queries for Responsive Design */
+
+@media (max-width: 768px) {
+    header {
+        padding: 10px; /* Less padding for mobile screens */
+    }
+    .logo{
+        width: 50px;
+    }
+    .feedback-link {
+        top: 10px;
+        right: 10px;
+        padding: 6px 10px;
+        font-size: 15px;
+        width: auto;           /* Prevent full width */
+        min-width: unset;      /* Cancel any inherited full width */
+    }
+    h1 {
+        font-size: 1.5em; /* Smaller font size for mobile */
+    }
+    h4 {
+        font-size: 12px;
+    }
+    p {
+        font-size: 18px; /* Smaller font size for mobile */
+        margin: 30px 0; /* Adjust margin for mobile */
+    }
+
+    #card {
+        padding: 30px; /* Less padding for mobile */
+    }
+
+    .box-1, .box-2, .box-3, .box-4, .box-5, .box-6 {
+        width: calc(100% - 20px); /* Full width boxes on mobile */
+        margin-right: 10px; /* No margin on mobile */
+        margin-bottom: 20px; /* Add margin below each box */
+    }
+
+    button {
+        max-width: 100%;
+        min-width: 150px;
+        width: auto;
+    }
 }
