@@ -16,12 +16,12 @@ header {
     /*align-items: center; */
     justify-content: space-between; 
     padding: 20px; 
-    background-color: #145267; 
+    background-color: black; 
     flex-wrap: wrap;
 }
 
 .logo {
-    width: 100px; 
+    width: 50px 50px; 
     height: auto; 
     margin-right: 20px; 
 }
