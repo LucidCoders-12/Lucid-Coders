@@ -11,17 +11,20 @@ body {
 }
 
 header {
-    position: relative; /* Important for absolute positioning inside */
-    display: flex; 
-    /*align-items: center; */
-    justify-content: space-between; 
-    padding: 20px; 
-    background-color: black; 
-    flex-wrap: wrap;
+    position: sticky; /* Important for absolute positioning inside */
+top: 0; /* Stick to the top */
+z-index: 1000; /* Stay on top */
+display: flex;
+justify-content: space-between;
+padding: 20px;
+background-color: #145267;
+/* Add a subtle shadow at the bottom of the header */
+box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+flex-wrap: wrap;
 }
 
 .logo {
-    width: 150px; 
+    width: 100px; 
     height: auto; 
     margin-right: 20px; 
 }
